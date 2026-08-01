@@ -8,9 +8,7 @@ import requests
 
 API_KEY = os.getenv("API_KEY")
 
-BASE_URL = (
-    f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/"
-)
+BASE_URL = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/"
 
 
 # ==============================
@@ -112,17 +110,11 @@ def main():
 
     try:
 
-        valor = float(
-            input("\nDigite o valor: ")
-        )
+        valor = float(input("\nDigite o valor: "))
 
-        origem = input(
-            "Digite a moeda de origem (ex: USD): "
-        )
+        origem = input("Digite a moeda de origem (ex: USD): ")
 
-        destino = input(
-            "Digite a moeda de destino (ex: BRL): "
-        )
+        destino = input("Digite a moeda de destino (ex: BRL): ")
 
 
         if valor <= 0:
@@ -130,11 +122,7 @@ def main():
             return
 
 
-        converter(
-            valor,
-            origem,
-            destino
-        )
+        converter(valor, origem, destino)
 
 
     except ValueError:
